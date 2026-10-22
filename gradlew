@@ -63,6 +63,7 @@ while
     APP_HOME=${PRG#"${PRG%%[!/]*}"} # strip leading slashes
     [ -z "$APP_HOME" ] && break
     [ -L "$PRG" ] || break
+do
     ls=`ls -ld "$PRG"`
     link=`expr "$ls" : '.*-> \(.*\)$'`
     if expr "$link" : '/.*' > /dev/null; then
