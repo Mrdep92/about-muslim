@@ -22,6 +22,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import com.aboutmuslim.app.R
 import com.aboutmuslim.app.ui.screens.AboutScreen
 import com.aboutmuslim.app.ui.screens.HomeScreen
 import com.aboutmuslim.app.ui.screens.PrayerScreen
