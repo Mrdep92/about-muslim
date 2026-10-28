@@ -1,9 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">About Muslim</string>
-    <string name="nav_home">Beranda</string>
-    <string name="nav_prayer">Jadwal Shalat</string>
-    <string name="nav_quran">Al-Qur\'an</string>
-    <string name="nav_dua">Doa &amp; Zikir</string>
-    <string name="nav_about">Tentang Islam</string>
+    <string name="app_name">Pixelforge</string>
+    <string name="update_location">Perbarui Lokasi GPS</string>
+    <string name="prayer_times">Jadwal Sholat</string>
+    <string name="qibla_compass">Kompas Kiblat</string>
+    <string name="location_default">Lokasi: default Jakarta</string>
 </resources>
