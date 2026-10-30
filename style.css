@@ -1,0 +1,240 @@
+/* style.css - Aplikasi Islam: Konten Dasar, Jadwal Sholat, Arah Kiblat */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #006400;
+  --primary-dark: #004d00;
+  --accent: #c5a059;
+  --bg: #f7f7f4;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --text-muted: #666666;
+  --border: #e0e0e0;
+  --radius: 12px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  padding: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  padding: 1.5rem 0 1rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 1.75rem;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+header p.subtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+section {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 0.5rem;
+}
+
+/* 5 Pilar Islam */
+.pilar-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+.pilar-card {
+  background: #f0f7f0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* Cara Wudhu dan Sholat */
+.steps ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.steps li {
+  margin-bottom: 0.4rem;
+}
+
+/* Jadwal Sholat */
+.kota-info {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.jadwal-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.jadwal-cell {
+  background: #f0f7f0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.jadwal-cell .waktu {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+
+.jadwal-cell .nama {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Arah Kiblat */
+.qibla-box {
+  text-align: center;
+}
+
+.degree-display {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 0.5rem 0;
+}
+
+.compass {
+  width: 200px;
+  height: 200px;
+  border: 4px solid var(--border);
+  border-radius: 50%;
+  margin: 1rem auto;
+  position: relative;
+  background: conic-gradient(from 0deg, #e0e0e0 0deg, #ffffff 90deg, #e0e0e0 180deg, #ffffff 270deg);
+}
+
+.compass-needle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 50%;
+  background: #d32f2f;
+  transform-origin: top center;
+  transform: translate(-50%, -100%) rotate(0deg);
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.compass-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: #d32f2f;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.qibla-controls {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.qibla-controls input[type="number"] {
+  width: 120px;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.qibla-controls button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.qibla-controls button:hover {
+  background: var(--primary-dark);
+}
+
+.offline-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  background: #fff3cd;
+  color: #856404;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+  border: 1px solid #ffeeba;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .jadwal-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .degree-display {
+    font-size: 2rem;
+  }
+}

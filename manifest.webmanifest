@@ -1,0 +1,12 @@
+{
+  "lang": "id",
+  "name": "Aplikasi PWA Offline",
+  "short_name": "PWA",
+  "description": "Aplikasi Progressive Web App yang dapat diakses secara offline",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "scope": "/",
+  "icons": []
+}
