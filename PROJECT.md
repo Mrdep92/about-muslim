@@ -1,38 +1,35 @@
-# Islam Pintar
+# MuslimKu
 
 Jenis: pwa | Bahasa: id
 
 ## Fitur
-- F1 Konten dasar Islam
-  - lulus bila: halaman utama menampilkan judul
-  - lulus bila: 5 pilar Islam tercantum
-  - lulus bila: cara wudhu dan sholat tersedia
-- F2 Jadwal sholat
-  - lulus bila: jadwal sholat ditampilkan
-  - lulus bila: default kota Jakarta digunakan
-  - lulus bila: cache terakhir digunakan offline
-- F3 Arah kiblat
-  - lulus bila: derajat kiblat ditampilkan
-  - lulus bila: kompas ponsel atau fallback manual
-  - lulus bila: input derajat manual tersedia
-- F4 PWA offline
-  - lulus bila: service worker terdaftar
-  - lulus bila: manifest webapp tersedia
+- F1 Jadwal shalat 5 waktu
+  - lulus bila: jadwal Jakarta ditampilkan
+  - lulus bila: daftar kota pilihan tersedia
+  - lulus bila: tidak ada kesalahan konsol saat online
+- F2 Doa harian
+  - lulus bila: daftar doa ditampilkan
   - lulus bila: bisa diakses offline
-- F5 Notifikasi sholat
-  - lulus bila: tombol izinkan notifikasi tersedia
-  - lulus bila: izin browser diminta
+- F3 Bacaan surah pendek Juz 30
+  - lulus bila: surah pendek ditampilkan
+  - lulus bila: bisa diakses offline
+- F4 Arah kiblat via kompas
+  - lulus bila: kompas ditampilkan
+  - lulus bila: arah kiblat ditunjukkan
+- F5 Notifikasi pengingat shalat
+  - lulus bila: izin notifikasi diminta
+  - lulus bila: pengingat 10 menit sebelum adzan
 
 ## File
 - index.html
-- js/app.js — initApp(), showPrayerTimes(times), showQibla(bearing), requestNotificationPermission()
-- js/prayer.js — getPrayerTimes(lat,lon,date), cachePrayerTimes(times), loadCachedPrayerTimes()
-- js/qibla.js — getQiblaBearing(lat,lon), startCompass(callback), setManualBearing(deg)
-- style.css
+- css/style.css
+- js/app.js — renderJadwal(data), requestNotifikasi(), hitungKiblat(lat,lon), simpanData(kunci,data), bacaData(kunci)
+- sw.js
 - manifest.webmanifest
 
 ## Keputusan
-- Tanpa login, semua konten publik
-- GPS otomatis dengan fallback Jakarta
-- Notifikasi teks tanpa suara
-- Kompas ponsel dengan fallback manual derajat
+- UI satu halaman tema hijau putih tanpa framework
+- jadwal online dari API disimpan sementara di browser
+- doa dan surah tersedia offline via service worker
+- kartu pengetahuan hanya prayer-times dan qibla; fitur lain tidak ada kartu
+- notifikasi browser 10 menit sebelum adzan

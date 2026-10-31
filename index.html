@@ -4,50 +4,44 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aplikasi Islam</title>
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <h1 id="title">Aplikasi Islam</h1>
 
 <section>
-<h2>5 Pilar Islam</h2>
-<ul id="pilar"></ul>
+<h2>Pilihan Kota</h2>
+<p>Kota saat ini:</p>
+<div id="kota-display"></div>
 </section>
 
 <section>
-<h2>Cara Wudhu</h2>
-<p id="wudhu"></p>
+<h2>Jadwal Sholat 5 Waktu</h2>
+<div id="jadwal-container"></div>
 </section>
 
 <section>
-<h2>Cara Sholat</h2>
-<p id="sholat"></p>
+<h2>Doa Harian</h2>
+<div id="doa-container"></div>
 </section>
 
 <section>
-<h2>Jadwal Sholat - Jakarta</h2>
-<div id="times"></div>
+<h2>Bacaan Surah Pendek Juz 30</h2>
+<div id="surah-container"></div>
 </section>
 
 <section>
 <h2>Arah Kiblat</h2>
-<div id="qibla"></div>
-<p id="deg">Derajat: --</p>
-<input type="number" id="inputDeg" placeholder="Masukkan derajat manual">
-<button id="btnDeg">Set Derajat</button>
+<div id="kompas-container"></div>
+<div id="kiblat-info"></div>
 </section>
 
-<button id="btnNotif">Aktifkan Notifikasi Sholat</button>
-
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js')
-  .then(function(reg) { console.log('Service Worker terdaftar', reg); })
-  .catch(function(err) { console.log('Service Worker gagal', err); });
-}
-</script>
+<section>
+<h2>Notifikasi Pengingat Sholat</h2>
+<p>Pengingat 10 menit sebelum adzan.</p>
+<button id="notif-btn"></button>
+<div id="notif-status"></div>
+</section>
 <script src="js/app.js"></script>
-<script>initApp();</script>
 </body>
 </html>
